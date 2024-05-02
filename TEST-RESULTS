@@ -1,0 +1,15 @@
+Test crne kutije: Program zadovoljavajuće rešava računske operacije sabiranja, oduzimanja, množenja i deljenja. Program nije ni jednom pao tokom testiranja. Na svaki unos različit od brojeva i znakova za aritmetičke operacije program odgovara sa porukom Error. Program nije osposobljen za množenje i deljenje u kome je negativan broj drugi operand. Obični kalkulatori računaju ovakve operacije. Na primer na izraz 5*-5 program odgovara sa Error. Program bi trebalo ili da rešava ovakve operacije ili da preko jednostavnih poruka objasni korisniku za kako da ih izvršava. Program bi trebao da pored poruke Error koriisniku pošalje i objašnjenje suštine greške koju je napravio. Poželjno je da se programu doda mogućnost za rešavanje operacija sa procentima (%).
+Unit test za metodu Calculator.Run:
+import static org.junit.Assert.assertEquals;
+
+public class CalculatorTest {
+
+
+    @Test
+
+    public void testCalculator() {
+
+        assertEquals("Test failed", 10, Calculator.Run(10*2/4+10-5), 0.001);
+
+    }
+}
